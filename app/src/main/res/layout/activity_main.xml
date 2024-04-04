@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:clickable="true"
+    android:contextClickable="true"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/img_btn_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/left"
+        app:layout_constraintEnd_toStartOf="@+id/img_btn_right"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_k_friend" />
+
+    <ImageButton
+        android:id="@+id/img_btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_btn_left"
+        app:layout_constraintTop_toTopOf="@+id/img_btn_left" />
+
+    <SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="400dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        style="@style/SearchBarShape"
+        android:queryBackground="@null"
+        android:queryHint="search about home team matches"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_match_details"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="@string/match_details"
+        android:textColor="#DE121212"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/search_bar"
+        app:layout_constraintStart_toStartOf="@+id/search_bar"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+
+    <View
+        android:id="@+id/back"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/logo_background"
+        app:layout_constraintBottom_toBottomOf="@+id/img_barcelona"
+        app:layout_constraintEnd_toEndOf="@+id/img_barcelona"
+        app:layout_constraintStart_toStartOf="@+id/img_barcelona"
+        app:layout_constraintTop_toTopOf="@+id/img_barcelona" />
+
+    <ImageView
+        android:id="@+id/img_barcelona"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/barcelona"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+
+    <ImageView
+        android:id="@+id/img_real_madrid"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/realmadrid"
+        app:layout_constraintBottom_toBottomOf="@+id/img_barcelona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_barcelona" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="@string/date"
+        android:textColor="#5E121212"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_barcelona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_barcelona" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="@string/score"
+        android:textColor="#DE121212"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_barcelona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_barcelona"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_barcelona"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="@string/barcelona"
+        android:textColor="#DE121212"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_barcelona"
+        app:layout_constraintStart_toStartOf="@+id/img_barcelona"
+        app:layout_constraintTop_toBottomOf="@+id/img_barcelona" />
+
+    <TextView
+        android:id="@+id/tv_spain1"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="@string/spain"
+        android:textColor="#99121212"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_barcelona"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_barcelona"
+        app:layout_constraintTop_toBottomOf="@+id/tv_barcelona" />
+
+    <TextView
+        android:id="@+id/tv_Madrid"
+        android:layout_width="0dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="@string/madrid"
+        android:textColor="#DE121212"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_barcelona"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_barcelona"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_spain2"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="@string/spain"
+        android:textColor="#99121212"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_Madrid"
+        app:layout_constraintStart_toStartOf="@+id/tv_Madrid"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Madrid" />
+
+    <TextView
+        android:id="@+id/tv_k_friend"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="@string/k_friend"
+        android:textColor="#CC121212"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_spain1" />
+
+
+    <TextView
+        android:id="@+id/tv_match_statistic"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="@string/match_statistic"
+        android:textColor="#DE121212"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_left" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_match_statistic">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_shoot" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/shoot" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_shoot" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_shoot_in_target" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/shoot_on_target" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_shoot_in_target" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_ball_possenssion" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/ball_possession" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_ball_possession" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_pass" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/pass" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_pass" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_pass_accuracy" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/pass_accuracy" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_pass_accuracy" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_foul" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/foul" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_foul" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_yellow_card" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/yellow_card" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_yellow_card" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_red_card" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/red_card" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_red_card" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_offside" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/offside" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_offside" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/barcelona_corner_kick" />
+
+                <TextView
+                    style="@style/TextTheme.Normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/corner_kick" />
+
+                <TextView
+                    style="@style/TextTheme.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/madrid_corner_kick" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
